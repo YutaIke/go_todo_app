@@ -38,7 +38,7 @@ func (ru *RegisterUser) ServeHttp(w http.ResponseWriter, r *http.Request) {
 		}, http.StatusInternalServerError)
 	}
 	rsp := struct {
-		ID entity.UserID `json;"id"`
+		ID entity.UserID `json:"id"`
 	}{ID: u.ID}
 	RespondJSON(ctx, w, rsp, http.StatusOK)
 }
